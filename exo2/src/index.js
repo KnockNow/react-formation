@@ -18,22 +18,22 @@ class Case extends React.Component {
   }
 }
 
-class Resultat extends React.Component {
+class Results extends React.Component {
   render () {
     const { children, ...rest } = this.props;
     return (
-      <div className="resultat" {...rest}>
+      <div className="results" {...rest}>
         {children}
       </div>
     )
   }
 }
 
-class Calculette extends React.Component {
+class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      resultat: 0,
+      results: 0,
     }
     this.calculate = this.calculate.bind(this);
   }
@@ -43,8 +43,8 @@ class Calculette extends React.Component {
   render() {
     const { operations, addOperation } = this.props;
     return (
-      <div className="calculette">
-        <Resultat>{operations.join('')}</Resultat>
+      <div className="calculator">
+        <Results>{operations.join('')}</Results>
         <div className="cases">
           {[7, 8, 9, 4, 5, 6, 1, 2, 3, 0, '.'].map((c) => <Case key={c} onClick={() => addOperation(c)}>{c}</Case>)}
           <Case onClick={this.calculate}>=</Case>
@@ -65,9 +65,9 @@ const mapStateToProps = (state) => (console.log({state}), {
   operations: state.app.operations,
 });
 
-const ReduxCalculette = connect(mapStateToProps, mapDispatchToProps)(Calculette);
+const ReduxCalculator = connect(mapStateToProps, mapDispatchToProps)(Calculator);
 
 ReactDom.render(
-  <Provider store={store}><ReduxCalculette /></Provider>,
+  <Provider store={store}><ReduxCalculator /></Provider>,
   document.getElementById('app')
 );

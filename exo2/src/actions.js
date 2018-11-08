@@ -1,6 +1,6 @@
 /*
  *
- * Calculette actions
+ * Calculator actions
  *
  */
 

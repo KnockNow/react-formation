@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './style.css';
 
-class Calculette extends React.Component {
+class Calculator extends React.Component {
   render() {
     return (
-      <div className="calculette">
-        Ma calculette
+      <div className="calculator">
+        Amazing Calculator
       </div>
     );
   }
 }
 
 ReactDom.render(
-  <Calculette />,
+  <Calculator />,
   document.getElementById('app')
 );

@@ -2,28 +2,28 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './style.css';
 
-class Resultat extends React.Component {
+class Results extends React.Component {
   render () {
     const { children, ...rest } = this.props;
     return (
-      <div className="resultat" {...rest}>
+      <div className="results" {...rest}>
         {children}
       </div>
     )
   }
 }
 
-class Calculette extends React.Component {
+class Calculator extends React.Component {
   render() {
     return (
-      <div className="calculette">
-        <Resultat>0</Resultat>
+      <div className="calculator">
+        <Results>0</Results>
       </div>
     );
   }
 }
 
 ReactDom.render(
-  <Calculette />,
+  <Calculator />,
   document.getElementById('app')
 );
