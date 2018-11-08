@@ -1,0 +1,55 @@
+.case {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: #2979ff;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.case:hover {
+  background: #007ac1;
+  cursor: pointer;
+}
+
+.cases {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.cases.operations {
+  width: 100px;
+  opacity: 0.8;
+}
+
+.calculette {
+  display: flex;
+  width: 400px;
+  height: 600px;
+  max-width: 600px;
+  flex-wrap: wrap;
+}
+
+.resultat {
+  height: 200px;
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  z-index: 2;
+  color: #efefef;
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+  font-size: 64;
+  padding-right: 8px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
